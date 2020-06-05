@@ -1,4 +1,4 @@
 #!/bin/sh
 sudo /home/dami/.nvm/versions/node/v10.9.0/bin/npm run build
 sudo rm -rf /var/www/admin-front/dist
-sudo mv /var/lib/jenkins/workspace/front/dist/ /var/www/admin-front/
+sudo mv /var/lib/jenkins/workspace/TM\ -\ Front/dist/ /var/www/admin-front/
