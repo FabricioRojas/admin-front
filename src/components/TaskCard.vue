@@ -4,7 +4,7 @@
       <p class="text-gray-700 font-semibold font-sans tracking-wide text-sm">{{task.title}}</p>
       <img
         class="w-6 h-6 rounded-full ml-3"
-        src="@/assets/logo.png"
+        src="@/assets/img/logo.png"
         alt="Avatar"
       >
     </div>
