@@ -25,7 +25,7 @@
                 <md-input v-model="password" type="password"></md-input>
               </md-field>
               <button>
-                <md-button slot="footer" class="md-simple md-success md-lg">Logueame</md-button>
+                <md-button slot="footer" class="md-simple md-success md-lg">Logueame Esta</md-button>
               </button>
               <!-- </login-card> -->
             </form>
