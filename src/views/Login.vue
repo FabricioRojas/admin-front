@@ -6,7 +6,7 @@
             <div
               class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
             >
-              <login-card header-color="green">
+              <!-- <login-card header-color="green"> -->
                 <h4 slot="title" class="card-title">Login</h4>
                 <md-field class="md-form-group" slot="inputs">
                   <md-icon>face</md-icon>
@@ -26,7 +26,7 @@
                 <md-button slot="footer" class="md-simple md-success md-lg">
                   Get Started
                 </md-button>
-              </login-card>
+              <!-- </login-card> -->
             </div>
           </div>
         </div>
@@ -36,6 +36,7 @@
 
 <script>
 // import { LoginCard } from '../components/LoginCard'
+import loginController from '../controllers/login'
 
 export default {
   components: {
@@ -48,6 +49,9 @@ export default {
       email: null,
       password: null
     }
+  },
+  created () {
+    loginController.login()
   },
   props: {
     header: {
