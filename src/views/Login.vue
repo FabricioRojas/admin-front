@@ -6,6 +6,7 @@
             <div
               class="md-layout-item md-size-33 md-small-size-66 md-xsmall-size-100 md-medium-size-40 mx-auto"
             >
+            <form @submit.prevent="formSubmit">
               <!-- <login-card header-color="green"> -->
                 <h4 slot="title" class="card-title">Login</h4>
                 <md-field class="md-form-group" slot="inputs">
@@ -21,12 +22,13 @@
                 <md-field class="md-form-group" slot="inputs">
                   <md-icon>lock_outline</md-icon>
                   <label>Password...</label>
-                  <md-input v-model="password"></md-input>
+                  <md-input v-model="password" type="password"></md-input>
                 </md-field>
-                <md-button slot="footer" class="md-simple md-success md-lg">
-                  Get Started
-                </md-button>
+                <button ><md-button slot="footer" class="md-simple md-success md-lg">
+                  Logueame
+                </md-button></button>
               <!-- </login-card> -->
+            </form>
             </div>
           </div>
         </div>
@@ -51,12 +53,26 @@ export default {
     }
   },
   created () {
-    loginController.login()
+    loginController.get()
   },
   props: {
     header: {
       type: String,
       default: 'black'
+    }
+  },
+  methods: {
+    formSubmit () {
+      console.log('submit')
+      loginController.register({
+        username: this.email,
+        password: this.password
+      })
+
+      loginController.login({
+        username: this.email,
+        password: this.password
+      })
     }
   },
   computed: {
