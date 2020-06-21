@@ -8,7 +8,7 @@ export default {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
             },
-            url: 'http://192.168.0.23:3001/'
+            url: 'http://192.168.0.148:3000/'
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
@@ -22,7 +22,7 @@ export default {
                 'Content-Type': 'application/json'
             },
             data: data,
-            url: 'http://192.168.0.23:3001/user'
+            url: 'http://192.168.0.148:3000/user'
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
@@ -36,7 +36,7 @@ export default {
                 'Content-Type': 'application/json'
             },
             data: data,
-            url: 'http://192.168.0.23:3001/login'
+            url: 'http://192.168.0.148:3000/login'
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
