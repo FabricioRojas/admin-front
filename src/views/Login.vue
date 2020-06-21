@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <div class="main main-raised">
       <div class="section page-header header-filter" :style="headerStyle">
         <div class="container">
           <div class="md-layout">
@@ -31,7 +30,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -54,7 +52,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require('@/assets/img/logo.png')
+      default: 'black'
     }
   },
   computed: {

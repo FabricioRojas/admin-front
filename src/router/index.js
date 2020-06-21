@@ -5,6 +5,7 @@ import HelloWorld from '@/views/HelloWorld'
 import Kanban from '@/views/Kanban'
 import Login from '@/views/Login'
 import Dashboard from '@/views/Dashboard'
+import DashboardLayout from '@/views/DashboardLayout.vue'
 
 import MainNavbar from '@/layout/MainNavbar.vue'
 import MainFooter from '@/layout/MainFooter.vue'
@@ -33,18 +34,27 @@ export default new Router({
       }
     },
     {
-      path: '/dashboard',
-      name: 'Dashboard',
-      components: { default: Dashboard, footer: MainFooter },
+      path: '/login',
+      name: 'Login',
+      components: { default: Login, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
       }
     },
     {
-      path: '/login',
-      name: 'Login',
-      components: { default: Login, header: MainNavbar, footer: MainFooter },
+      path: '/dashboard',
+      name: 'Dashboard',
+      components: { default: DashboardLayout },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: 'black' }
+      }
+    },
+    {
+      path: '/dashboard/test',
+      name: 'Dashboard',
+      components: { default: Dashboard },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
