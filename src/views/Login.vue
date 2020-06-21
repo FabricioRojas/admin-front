@@ -53,7 +53,7 @@ export default {
     };
   },
   created() {
-    loginController.get();
+    loginController.get()
   },
   props: {
     header: {

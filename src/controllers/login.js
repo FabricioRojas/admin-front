@@ -4,11 +4,8 @@ export default {
     get() {
         const options = {
             method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
-            url: 'http://192.168.0.23:3001/'
+            headers: {'Access-Control-Allow-Origin': '*','Content-Type': 'application/json'},
+            url: `${process.env.VUE_APP_API_URL}/`
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
@@ -17,12 +14,9 @@ export default {
     register(data) {
         const options = {
             method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
+            headers: {'Access-Control-Allow-Origin': '*','Content-Type': 'application/json'},
             data: data,
-            url: 'http://192.168.0.23:3001/user'
+            url: `${process.env.VUE_APP_API_URL}/user`
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
@@ -31,12 +25,9 @@ export default {
     login(data) {
         const options = {
             method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
+            headers: {'Access-Control-Allow-Origin': '*','Content-Type': 'application/json'},
             data: data,
-            url: 'http://192.168.0.23:3001/login'
+            url: `${process.env.VUE_APP_API_URL}/login`
         }
         axios(options).then(function (response) {
             console.log('response', response.data)
